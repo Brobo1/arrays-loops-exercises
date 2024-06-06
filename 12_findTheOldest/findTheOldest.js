@@ -2,7 +2,7 @@ const findTheOldest = function (arr) {
   let age = [
     ...arr.map((peeps) => {
       return Math.abs(
-        peeps.yearOfDeath ?? new Date().getFullYear() - peeps.yearOfBirth,
+        (peeps.yearOfDeath ?? new Date().getFullYear()) - peeps.yearOfBirth,
       );
     }),
   ];
